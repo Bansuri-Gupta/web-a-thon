@@ -1,0 +1,113 @@
+<?phpinclude_once('connection.php');
+$query="select * from courses";
+$result=mysql_query($query);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section id="page">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light fs-5">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Wish-List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Faculty</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+            </div>
+
+    </section>
+    <!--HOME-->
+    <div class="Courses">
+        <div class="heading">
+            <h1 align="center"><strong>Upload Required Courses</strong></h1>
+ 
+        </div>
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <div class="wrapper wrapper--w680">
+                <div class="card card-1">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 class="title">Course Info</h2>
+                        <form action="connection.php" method="POST">
+                            <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="COURSE CODE" name="code">
+                            </div>
+                            <div class="row row-space">
+                                
+                            <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="COURSE NAME" name="name">
+                            </div>
+    
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="number" placeholder="LECTURE HOURS" name="l_hours" min="0">   
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="number" placeholder="TUTORIAL HOURS" name="t_hours" min="0">   
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="number" placeholder="PRACTICAL HOURS" name="p_hours" min="0">   
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="number" placeholder="J-COMP HOURS" name="j_hours" min="0">   
+                                    </div>
+                                </div>
+                            <div class="row row-space">
+                               
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="number" placeholder="CREDITS" name="credits" min="0">
+                                    </div>
+                                
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn--radius btn--grey">View Courses</button>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
